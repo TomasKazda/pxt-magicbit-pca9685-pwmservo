@@ -164,7 +164,7 @@ namespace PCAservo {
             initPCA9685()
         }
         // 50hz: 20,000 us
-        let value = v_us * 4096 / 20000
+        let value = Math.constrain(v_us, 300, 2800) * 4096 / 20000
         setPwm(index + 7, 0, value)
     }
 }
