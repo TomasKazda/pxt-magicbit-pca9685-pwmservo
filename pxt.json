@@ -1,16 +1,13 @@
 {
     "name": "pxt-magicbit-pca9685-pwmservo",
-    "version": "0.0.0",
+    "version": "0.0.2",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts"
+        "magicbitPCA9685servo.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -23,5 +20,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
