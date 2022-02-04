@@ -158,7 +158,7 @@ namespace PCAservo {
     */
     //% blockId=magicbit_geekservo block="Servo|%index|pulse width %v_us"
     //% weight=90
-    //% v_us.min=500 degree.max=2500
+    //% v_us.min=500 v_us.max=2500
     export function GeekServo(index: Servos, v_us: number): void {
         if (!initialized) {
             initPCA9685()
@@ -166,5 +166,18 @@ namespace PCAservo {
         // 50hz: 20,000 us
         let value = Math.constrain(v_us, 300, 2800) * 4096 / 20000
         setPwm(index + 7, 0, value)
+    }
+    
+    /**
+     * Release servo
+     * @param index Servo Channel; eg: PCAservo.Servos.S1
+    */
+    //% blockId=magicbit_stopservo block="Servo|%index|"
+    //% weight=80
+    export function StopServo(index: Servos): void {
+        if (!initialized) {
+            initPCA9685()
+        }
+        setPwm(index + 7, 0, 0)
     }
 }
