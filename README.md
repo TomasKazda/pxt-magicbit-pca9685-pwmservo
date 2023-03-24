@@ -5,6 +5,9 @@
 
 **The project is outdated and unmaintained. Abandoned due to programs using this extension...**
 
+## Link to the current project
+[https://github.com/TomasKazda/pxt-magicbit-pca9685/](https://github.com/TomasKazda/pxt-magicbit-pca9685/)
+
 #### Metadata (used for search, rendering)
 
 * for PXT/microbit
